@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/StickmanSprite-PunchOne.png</File>
+    <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/StickmanSprite-PunchTwo.png</File>
+    <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/StickmanSprite-StanceOne.png</File>
+    <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/StickmanSprite-StanceTwo.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
