@@ -1,4 +1,6 @@
-﻿using BrawlSticksMelee.Sprites;
+﻿using BrawlSticksMelee.Screens;
+using BrawlSticksMelee.Sprites;
+using BrawlSticksMelee.StateManagement;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -8,6 +10,8 @@ namespace BrawlSticksMelee
     public class Game : Microsoft.Xna.Framework.Game
     {
         private GraphicsDeviceManager graphics;
+        private readonly ScreenManager screenManager;
+
         private SpriteBatch spriteBatch;
         private StickmanSprite stickman;
         private LevelOneEnemySprite enemy;
@@ -17,6 +21,20 @@ namespace BrawlSticksMelee
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+
+            var screenFactory = new ScreenFactory();
+            Services.AddService(typeof(IScreenFactory), screenFactory);
+
+            screenManager = new ScreenManager(this);
+            Components.Add(screenManager);
+
+            AddInitialScreens();
+        }
+
+        private void AddInitialScreens()
+        {
+            screenManager.AddScreen(new BackgroundScreen(), null);
+            screenManager.AddScreen(new MainMenu(), null);
         }
 
         protected override void Initialize()

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\19139\\Source\\Repos\\BrawlSticksMelee\\BrawlSticksMelee\\BrawlSticksMelee\\BrawlSticksMelee.csproj": {}
+    "C:\\Users\\nated\\source\\repos\\BrawlSticksMelee\\BrawlSticksMelee\\BrawlSticksMelee\\BrawlSticksMelee.csproj": {}
   },
   "projects": {
-    "C:\\Users\\19139\\Source\\Repos\\BrawlSticksMelee\\BrawlSticksMelee\\BrawlSticksMelee\\BrawlSticksMelee.csproj": {
+    "C:\\Users\\nated\\source\\repos\\BrawlSticksMelee\\BrawlSticksMelee\\BrawlSticksMelee\\BrawlSticksMelee.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\19139\\Source\\Repos\\BrawlSticksMelee\\BrawlSticksMelee\\BrawlSticksMelee\\BrawlSticksMelee.csproj",
+        "projectUniqueName": "C:\\Users\\nated\\source\\repos\\BrawlSticksMelee\\BrawlSticksMelee\\BrawlSticksMelee\\BrawlSticksMelee.csproj",
         "projectName": "BrawlSticksMelee",
-        "projectPath": "C:\\Users\\19139\\Source\\Repos\\BrawlSticksMelee\\BrawlSticksMelee\\BrawlSticksMelee\\BrawlSticksMelee.csproj",
-        "packagesPath": "C:\\Users\\19139\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\19139\\Source\\Repos\\BrawlSticksMelee\\BrawlSticksMelee\\BrawlSticksMelee\\obj\\",
+        "projectPath": "C:\\Users\\nated\\source\\repos\\BrawlSticksMelee\\BrawlSticksMelee\\BrawlSticksMelee\\BrawlSticksMelee.csproj",
+        "packagesPath": "C:\\Users\\nated\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nated\\source\\repos\\BrawlSticksMelee\\BrawlSticksMelee\\BrawlSticksMelee\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\19139\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nated\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
