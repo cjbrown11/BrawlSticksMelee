@@ -4,12 +4,12 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/LevelOneEnemySprite-PunchOne.png</File>
-    <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/LevelOneEnemySprite-StanceOne.png</File>
-    <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/LevelOneEnemySprite-StanceTwo.png</File>
-    <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/StickmanSprite-PunchOne.png</File>
-    <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/StickmanSprite-StanceOne.png</File>
-    <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/StickmanSprite-StanceTwo.png</File>
+    <File>C:/Users/19139/Source/Repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/LevelOneEnemySprite-PunchOne.png</File>
+    <File>C:/Users/19139/Source/Repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/LevelOneEnemySprite-StanceOne.png</File>
+    <File>C:/Users/19139/Source/Repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/LevelOneEnemySprite-StanceTwo.png</File>
+    <File>C:/Users/19139/Source/Repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/StickmanSprite-PunchOne.png</File>
+    <File>C:/Users/19139/Source/Repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/StickmanSprite-StanceOne.png</File>
+    <File>C:/Users/19139/Source/Repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/StickmanSprite-StanceTwo.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

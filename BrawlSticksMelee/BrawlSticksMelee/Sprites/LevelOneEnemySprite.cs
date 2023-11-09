@@ -19,7 +19,9 @@ namespace BrawlSticksMelee.Sprites
 
         private Texture2D[] stanceFrame;
 
-        private Vector2 position;
+        public Vector2 position;
+
+        public int health = 50;
 
         private StickmanSprite player;
 
@@ -60,12 +62,12 @@ namespace BrawlSticksMelee.Sprites
             // Automated Movement
             if (position.X + 50 > player.position.X)
             {
-                position += new Vector2(-2, 0);
+                position += new Vector2(-1.5f, 0);
                 flipped = true;
             }
             if (position.X - 50 < player.position.X)
             {
-                position += new Vector2(2, 0);
+                position += new Vector2(1.5f, 0);
                 flipped = false;
             }
         }
@@ -82,22 +84,28 @@ namespace BrawlSticksMelee.Sprites
 
             // Update animation frame
 
+            
             if (animationTimer > 0.4)
             {
-                if (animationFrame == 2)
+                if ((position.X < player.position.X + 50 && position.X > player.position.X - 50) && animationFrame != 2)
+                {
+                    animationFrame = 2;
+                    animationTimer = 0.2;
+                }
+                else if (animationFrame == 2)
                 {
                     animationFrame++;
-                    animationTimer = 0.3;
+                    animationTimer = 0.2;
                 }
                 else if (animationFrame == 3)
                 {
                     animationFrame++;
-                    animationTimer = 0.3;
+                    animationTimer = 0.2;
                 }
                 else if (animationFrame == 4)
                 {
                     animationFrame = 0;
-                    animationTimer = 0.3;
+                    animationTimer = 0.2;
                 }
                 else
                 {

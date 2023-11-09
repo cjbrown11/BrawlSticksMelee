@@ -21,7 +21,7 @@ namespace BrawlSticksMelee
 
         protected override void Initialize()
         {
-            stickman = new StickmanSprite(new Vector2(0, graphics.PreferredBackBufferHeight - 100));
+            stickman = new StickmanSprite(new Vector2(0, graphics.PreferredBackBufferHeight - 100), enemy = new LevelOneEnemySprite(new Vector2(670, graphics.PreferredBackBufferHeight - 100), stickman));
             enemy = new LevelOneEnemySprite(new Vector2(670, graphics.PreferredBackBufferHeight - 100), stickman);
 
             base.Initialize();
@@ -51,9 +51,11 @@ namespace BrawlSticksMelee
 
             spriteBatch.Begin();
             stickman.Draw(gameTime, spriteBatch);
-            enemy.Draw(gameTime, spriteBatch);
-            spriteBatch.End();
-
+            if(enemy.health != 0)
+            {
+                enemy.Draw(gameTime, spriteBatch);
+                spriteBatch.End();
+            }
             base.Draw(gameTime);
         }
     }

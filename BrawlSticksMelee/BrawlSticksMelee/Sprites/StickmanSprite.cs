@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
+using System.Security.Cryptography.X509Certificates;
 
 namespace BrawlSticksMelee.Sprites
 {
@@ -27,15 +28,18 @@ namespace BrawlSticksMelee.Sprites
 
         public Vector2 position;
 
+        public LevelOneEnemySprite enemySprite;
+
         private bool flipped;
 
         private double animationTimer;
 
         private short animationFrame = 0;
 
-        public StickmanSprite(Vector2 startingPosition)
+        public StickmanSprite(Vector2 startingPosition, LevelOneEnemySprite enemy)
         {
             position = startingPosition;
+            enemySprite = enemy;
         }
 
         /// <summary>
@@ -96,6 +100,10 @@ namespace BrawlSticksMelee.Sprites
             {
                 animationFrame = 2;
                 animationTimer = 0.3;
+                if ((position.X < enemySprite.position.X + 50 && position.X > enemySprite.position.X - 50))
+                {
+                    enemySprite.health -= 10;
+                }
             }
             else if (animationTimer > 0.4)
             {

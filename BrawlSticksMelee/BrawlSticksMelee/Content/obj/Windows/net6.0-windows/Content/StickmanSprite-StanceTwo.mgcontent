@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/StickmanSprite-StanceTwo.png</SourceFile>
-  <SourceTime>2023-11-07T22:22:15.9219139-06:00</SourceTime>
-  <DestFile>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/bin/Windows/Content/StickmanSprite-StanceTwo.xnb</DestFile>
-  <DestTime>2023-11-07T22:22:29.0208929-06:00</DestTime>
+  <SourceFile>C:/Users/19139/Source/Repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/StickmanSprite-StanceTwo.png</SourceFile>
+  <SourceTime>2023-11-08T22:01:56.6358797-06:00</SourceTime>
+  <DestFile>C:/Users/19139/Source/Repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/bin/Windows/Content/StickmanSprite-StanceTwo.xnb</DestFile>
+  <DestTime>2023-11-08T22:02:56.4149014-06:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T06:44:56-05:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
