@@ -10,6 +10,7 @@ namespace BrawlSticksMelee
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
         private StickmanSprite stickman;
+        private LevelOneEnemySprite enemy;
 
         public Game()
         {
@@ -21,6 +22,7 @@ namespace BrawlSticksMelee
         protected override void Initialize()
         {
             stickman = new StickmanSprite(new Vector2(0, graphics.PreferredBackBufferHeight - 100));
+            enemy = new LevelOneEnemySprite(new Vector2(670, graphics.PreferredBackBufferHeight - 100), stickman);
 
             base.Initialize();
         }
@@ -30,6 +32,7 @@ namespace BrawlSticksMelee
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             stickman.LoadContent(Content);
+            enemy.LoadContent(Content);
         }
 
         protected override void Update(GameTime gameTime)
@@ -37,6 +40,7 @@ namespace BrawlSticksMelee
             if (Keyboard.GetState().IsKeyDown(Keys.Escape)) Exit();
 
             stickman.Update(gameTime);
+            enemy.Update(gameTime);
 
             base.Update(gameTime);
         }
@@ -47,6 +51,7 @@ namespace BrawlSticksMelee
 
             spriteBatch.Begin();
             stickman.Draw(gameTime, spriteBatch);
+            enemy.Draw(gameTime, spriteBatch);
             spriteBatch.End();
 
             base.Draw(gameTime);

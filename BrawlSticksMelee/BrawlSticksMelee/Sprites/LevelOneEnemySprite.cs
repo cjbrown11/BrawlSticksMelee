@@ -21,15 +21,18 @@ namespace BrawlSticksMelee.Sprites
 
         private Vector2 position;
 
-        private bool flipped;
+        private StickmanSprite player;
+
+        private bool flipped = true;
 
         private double animationTimer;
 
         private short animationFrame = 0;
 
-        public LevelOneEnemySprite(Vector2 startingPosition)
+        public LevelOneEnemySprite(Vector2 startingPosition, StickmanSprite gamePlayer)
         {
             position = startingPosition;
+            player = gamePlayer;
         }
 
         /// <summary>
@@ -54,7 +57,17 @@ namespace BrawlSticksMelee.Sprites
         /// <param name="gameTime">The GameTime</param>
         public void Update(GameTime gameTime)
         {
-
+            // Automated Movement
+            if (position.X + 50 > player.position.X)
+            {
+                position += new Vector2(-2, 0);
+                flipped = true;
+            }
+            if (position.X - 50 < player.position.X)
+            {
+                position += new Vector2(2, 0);
+                flipped = false;
+            }
         }
 
         /// <summary>

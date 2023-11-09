@@ -25,7 +25,7 @@ namespace BrawlSticksMelee.Sprites
 
         private Texture2D[] stanceFrame;
 
-        private Vector2 position;
+        public Vector2 position;
 
         private bool flipped;
 
