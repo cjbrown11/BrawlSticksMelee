@@ -38,4 +38,6 @@ C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\o
 C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\obj\Debug\net6.0-windows\ref\BrawlSticksMelee.dll
 C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\StickmanSprite-StanceTwo.xnb
 C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\StickmanSprite-PunchOne.xnb
-C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\StickmanSprite-PunchTwo.xnb
+C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\LevelOneEnemySprite-PunchOne.xnb
+C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\LevelOneEnemySprite-StanceOne.xnb
+C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\LevelOneEnemySprite-StanceTwo.xnb
