@@ -26,20 +26,19 @@ namespace BrawlSticksMelee.Sprites
 
         private Texture2D[] stanceFrame;
 
-        public Vector2 position;
+        public int health = 50;
 
-        public LevelOneEnemySprite enemySprite;
+        public Vector2 position;
 
         private bool flipped;
 
         private double animationTimer;
 
-        private short animationFrame = 0;
+        public short animationFrame = 0;
 
-        public StickmanSprite(Vector2 startingPosition, LevelOneEnemySprite enemy)
+        public StickmanSprite(Vector2 startingPosition)
         {
             position = startingPosition;
-            enemySprite = enemy;
         }
 
         /// <summary>
@@ -100,10 +99,6 @@ namespace BrawlSticksMelee.Sprites
             {
                 animationFrame = 2;
                 animationTimer = 0.3;
-                if ((position.X < enemySprite.position.X + 50 && position.X > enemySprite.position.X - 50))
-                {
-                    enemySprite.health -= 10;
-                }
             }
             else if (animationTimer > 0.4)
             {

@@ -19,6 +19,7 @@ namespace BrawlSticksMelee
         public Game()
         {
             graphics = new GraphicsDeviceManager(this);
+            graphics.GraphicsProfile = GraphicsProfile.HiDef;
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
 
@@ -28,7 +29,7 @@ namespace BrawlSticksMelee
             screenManager = new ScreenManager(this);
             Components.Add(screenManager);
 
-            AddInitialScreens();
+            //AddInitialScreens();
         }
 
         private void AddInitialScreens()
@@ -39,9 +40,9 @@ namespace BrawlSticksMelee
 
         protected override void Initialize()
         {
-            stickman = new StickmanSprite(new Vector2(0, graphics.PreferredBackBufferHeight - 100), enemy = new LevelOneEnemySprite(new Vector2(670, graphics.PreferredBackBufferHeight - 100), stickman));
+            stickman = new StickmanSprite(new Vector2(0, graphics.PreferredBackBufferHeight - 100));
             enemy = new LevelOneEnemySprite(new Vector2(670, graphics.PreferredBackBufferHeight - 100), stickman);
-
+            
             base.Initialize();
         }
 
@@ -68,12 +69,16 @@ namespace BrawlSticksMelee
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             spriteBatch.Begin();
-            stickman.Draw(gameTime, spriteBatch);
-            if(enemy.health != 0)
+            if (stickman.health > 0)
+            {
+                stickman.Draw(gameTime, spriteBatch);
+            }    
+            if(enemy.health > 0)
             {
                 enemy.Draw(gameTime, spriteBatch);
-                spriteBatch.End();
             }
+            spriteBatch.End();
+
             base.Draw(gameTime);
         }
     }

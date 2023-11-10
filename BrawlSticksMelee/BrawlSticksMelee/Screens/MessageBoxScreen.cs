@@ -22,8 +22,8 @@ namespace BrawlSticksMelee.Screens
         // "A=ok, B=cancel" usage text prompt.
         public MessageBoxScreen(string message, bool includeUsageText = true)
         {
-            const string usageText = "\nA button, Space, Enter = ok" +
-                                     "\nB button, Backspace = cancel";
+            const string usageText = "\nEnter = ok" +
+                                     "\nBackspace = cancel";
 
             if (includeUsageText)
                 _message = message + usageText;
@@ -37,7 +37,7 @@ namespace BrawlSticksMelee.Screens
 
             _menuSelect = new InputAction(
                 new[] { Buttons.A, Buttons.Start },
-                new[] { Keys.Enter, Keys.Space }, true);
+                new[] { Keys.Enter}, true);
             _menuCancel = new InputAction(
                 new[] { Buttons.B, Buttons.Back },
                 new[] { Keys.Back, Keys.Escape }, true);
@@ -50,7 +50,7 @@ namespace BrawlSticksMelee.Screens
         public override void Activate()
         {
             var content = ScreenManager.Game.Content;
-            _gradientTexture = content.Load<Texture2D>("gradient");
+            _gradientTexture = content.Load<Texture2D>("PopUp");
         }
 
         public override void HandleInput(GameTime gameTime, InputState input)

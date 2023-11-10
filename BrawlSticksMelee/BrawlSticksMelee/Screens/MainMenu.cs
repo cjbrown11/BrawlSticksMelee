@@ -5,7 +5,7 @@ namespace BrawlSticksMelee.Screens
     // The main menu screen is the first thing displayed when the game starts up.
     public class MainMenu : MenuScreen
     {
-        public MainMenu() : base("Main Menu")
+        public MainMenu() : base("Brawl Sticks Melee")
         {
             var playGameMenuEntry = new MenuEntry("Play Game");
             var creditsMenuEntry = new MenuEntry("Credits");

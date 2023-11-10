@@ -87,10 +87,18 @@ namespace BrawlSticksMelee.Sprites
             
             if (animationTimer > 0.4)
             {
-                if ((position.X < player.position.X + 50 && position.X > player.position.X - 50) && animationFrame != 2)
+                if ((position.X < player.position.X + 50 && position.X > player.position.X - 50))
                 {
-                    animationFrame = 2;
-                    animationTimer = 0.2;
+                    if(player.animationFrame == 2)
+                    {
+                        health -= 10;
+                    }
+                    if(animationFrame != 2)
+                    {
+                        animationFrame = 2;
+                        animationTimer = 0.2;
+                        player.health -= 10;
+                    }
                 }
                 else if (animationFrame == 2)
                 {

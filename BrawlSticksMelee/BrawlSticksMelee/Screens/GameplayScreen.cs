@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using BrawlSticksMelee.StateManagement;
+using BrawlSticksMelee.Sprites;
 
 namespace BrawlSticksMelee.Screens
 {
@@ -18,6 +19,9 @@ namespace BrawlSticksMelee.Screens
 
         private Vector2 _playerPosition = new Vector2(100, 100);
         private Vector2 _enemyPosition = new Vector2(100, 100);
+
+        private StickmanSprite stickman;
+        private LevelOneEnemySprite enemy;
 
         private readonly Random _random = new Random();
 
@@ -161,7 +165,7 @@ namespace BrawlSticksMelee.Screens
             spriteBatch.DrawString(_gameFont, "// TODO", _playerPosition, Color.Green);
             spriteBatch.DrawString(_gameFont, "Insert Gameplay Here",
                                    _enemyPosition, Color.DarkRed);
-
+            
             spriteBatch.End();
 
             // If the game is transitioning on or off, fade it out to black.

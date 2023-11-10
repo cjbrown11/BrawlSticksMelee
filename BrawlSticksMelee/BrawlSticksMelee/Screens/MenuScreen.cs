@@ -161,7 +161,8 @@ namespace BrawlSticksMelee.Screens
             // Draw the menu title centered on the screen
             var titlePosition = new Vector2(graphics.Viewport.Width / 2, 80);
             var titleOrigin = font.MeasureString(_menuTitle) / 2;
-            var titleColor = new Color(192, 192, 192) * TransitionAlpha;
+            //var titleColor = new Color(192, 192, 192) * TransitionAlpha;
+            var titleColor = Color.AntiqueWhite;
             const float titleScale = 1.25f;
 
             titlePosition.Y -= transitionOffset * 100;

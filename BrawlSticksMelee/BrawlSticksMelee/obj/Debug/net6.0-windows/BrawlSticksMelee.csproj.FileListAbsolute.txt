@@ -86,3 +86,5 @@ C:\Users\19139\Source\Repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\o
 C:\Users\19139\Source\Repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\obj\Debug\net6.0-windows\ref\BrawlSticksMelee.dll
 C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\BrawlSticksMenuBackground.xnb
 C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\MenuFont.xnb
+C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\PopUp.xnb
+C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\blank.xnb
