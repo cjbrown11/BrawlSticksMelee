@@ -88,3 +88,14 @@ C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\b
 C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\MenuFont.xnb
 C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\PopUp.xnb
 C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\blank.xnb
+C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\healthbg.xnb
+C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\healthfg.xnb
+C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\questionmark.xnb
+C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\StickmanGloveSprite-PunchOne.xnb
+C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\StickmanGloveSprite-StanceOne.xnb
+C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\StickmanGloveSprite-StanceTwo.xnb
+C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\gamebackground.xnb
+C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\airpunch.xnb
+C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\bodypunch.xnb
+C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\backgroundMusic.wma
+C:\Users\nated\source\repos\BrawlSticksMelee\BrawlSticksMelee\BrawlSticksMelee\bin\Debug\net6.0-windows\Content\backgroundMusic.xnb

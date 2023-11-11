@@ -5,24 +5,32 @@ namespace BrawlSticksMelee.Screens
     // The main menu screen is the first thing displayed when the game starts up.
     public class MainMenu : MenuScreen
     {
-        public MainMenu() : base("Brawl Sticks Melee")
+        private BackgroundScreen background;
+
+        public bool isActive = true;
+
+        public MainMenu(BackgroundScreen bg) : base("Brawl Sticks Melee")
         {
+            background = bg;
+
             var playGameMenuEntry = new MenuEntry("Play Game");
-            var creditsMenuEntry = new MenuEntry("Credits");
+           // var creditsMenuEntry = new MenuEntry("Credits");
             var exitMenuEntry = new MenuEntry("Exit");
 
             playGameMenuEntry.Selected += PlayGameMenuEntrySelected;
-            creditsMenuEntry.Selected += CreditsMenuEntrySelected;
+            //creditsMenuEntry.Selected += CreditsMenuEntrySelected;
             exitMenuEntry.Selected += OnCancel;
 
             MenuEntries.Add(playGameMenuEntry);
-            MenuEntries.Add(creditsMenuEntry);
+            //MenuEntries.Add(creditsMenuEntry);
             MenuEntries.Add(exitMenuEntry);
         }
 
         private void PlayGameMenuEntrySelected(object sender, PlayerIndexEventArgs e)
         {
-            LoadingScreen.Load(ScreenManager, true, e.PlayerIndex, new GameplayScreen());
+            this.ExitScreen();
+            background.ExitScreen();
+            isActive = false;
         }
 
         private void CreditsMenuEntrySelected(object sender, PlayerIndexEventArgs e)

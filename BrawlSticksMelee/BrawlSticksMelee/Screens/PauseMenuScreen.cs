@@ -32,7 +32,8 @@ namespace BrawlSticksMelee.Screens
         // This uses the loading screen to transition from the game back to the main menu screen.
         private void ConfirmQuitMessageBoxAccepted(object sender, PlayerIndexEventArgs e)
         {
-            LoadingScreen.Load(ScreenManager, false, null, new BackgroundScreen(), new MainMenu());
+            var background = new BackgroundScreen();
+            LoadingScreen.Load(ScreenManager, false, null, background, new MainMenu(background));
         }
     }
 }

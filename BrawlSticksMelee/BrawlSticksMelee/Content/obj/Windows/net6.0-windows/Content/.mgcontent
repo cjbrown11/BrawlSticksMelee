@@ -4,18 +4,38 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/airpunch.wav</File>
+    <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/backgroundMusic.mp3</File>
     <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/blank.png</File>
+    <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/bodypunch.wav</File>
     <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/BrawlSticksMenuBackground.png</File>
+    <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/gamebackground.jpg</File>
+    <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/healthbg.png</File>
+    <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/healthfg.png</File>
     <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/LevelOneEnemySprite-PunchOne.png</File>
     <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/LevelOneEnemySprite-StanceOne.png</File>
     <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/LevelOneEnemySprite-StanceTwo.png</File>
     <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/MenuFont.spritefont</File>
     <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/PopUp.png</File>
+    <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/questionmark.png</File>
+    <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/StickmanGloveSprite-PunchOne.png</File>
+    <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/StickmanGloveSprite-StanceOne.png</File>
+    <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/StickmanGloveSprite-StanceTwo.png</File>
     <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/StickmanSprite-PunchOne.png</File>
     <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/StickmanSprite-StanceOne.png</File>
     <File>C:/Users/nated/source/repos/BrawlSticksMelee/BrawlSticksMelee/BrawlSticksMelee/Content/StickmanSprite-StanceTwo.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

@@ -26,11 +26,21 @@ namespace BrawlSticksMelee.Sprites
 
         private Texture2D[] stanceFrame;
 
-        public int health = 50;
+        private Texture2D front;
+
+        private Texture2D back;
 
         public Vector2 position;
 
+        private HealthBar healthBar;
+
         private bool flipped;
+
+        public bool poweredUp = false;
+
+        public int health = 100;
+
+        public int healthMax;
 
         private double animationTimer;
 
@@ -39,30 +49,59 @@ namespace BrawlSticksMelee.Sprites
         public StickmanSprite(Vector2 startingPosition)
         {
             position = startingPosition;
+
+            healthMax = health;
         }
 
         /// <summary>
         /// Loads the sprite texture using the provided ContentManager
         /// </summary>
         /// <param name="content">The ContentManager to load with</param>
-        public void LoadContent(ContentManager content)
+        public void LoadContent(ContentManager content, bool poweredUp)
         {
-            stanceFrame = new Texture2D[]
+            if(!poweredUp)
             {
+                stanceFrame = new Texture2D[]
+                {
                 stanceOne = content.Load<Texture2D>("StickmanSprite-StanceOne"),
                 stanceTwo = content.Load<Texture2D>("StickmanSprite-StanceTwo"),
                 punchOne = content.Load<Texture2D>("StickmanSprite-PunchOne"),
                 punchTwo = content.Load<Texture2D>("StickmanSprite-StanceOne"),
                 punchThree = content.Load<Texture2D>("StickmanSprite-PunchOne")
-            };
+                };
+            }
+            else
+            {
+                stanceFrame = new Texture2D[]
+                {
+                stanceOne = content.Load<Texture2D>("StickmanGloveSprite-StanceOne"),
+                stanceTwo = content.Load<Texture2D>("StickmanGloveSprite-StanceTwo"),
+                punchOne = content.Load<Texture2D>("StickmanGloveSprite-PunchOne"),
+                punchTwo = content.Load<Texture2D>("StickmanGloveSprite-StanceOne"),
+                punchThree = content.Load<Texture2D>("StickmanGloveSprite-PunchOne")
+                };
+            }
+
+            back = content.Load<Texture2D>("healthbg");
+            front = content.Load<Texture2D>("healthfg");
+
+            healthBar = new(back, front, healthMax, new(100, 50));
+        }
+
+        public void TakeDamage(int dmg)
+        {
+            health -= dmg;
+            if (health < 0) health = 0;
         }
 
         /// <summary>
         /// Updates the sprite's position based on user input
         /// </summary>
         /// <param name="gameTime">The GameTime</param>
-        public void Update(GameTime gameTime)
+        public void Update(GameTime gameTime, bool poweredUp, ContentManager content)
         {
+            LoadContent(content, poweredUp);
+
             keyboardState = Keyboard.GetState();
 
             // Apply keyboard movement
@@ -76,6 +115,8 @@ namespace BrawlSticksMelee.Sprites
                 position += new Vector2(2, 0);
                 flipped = false;
             }
+
+            healthBar.Update(health);
         }
 
         /// <summary>
@@ -125,10 +166,22 @@ namespace BrawlSticksMelee.Sprites
                 }
                 
             }
-            
 
+            if(position.X > 175 && position.X < 350 && animationFrame == 2)
+            {
+                poweredUp = true;
+            }
+     
             SpriteEffects spriteEffects = (flipped) ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
-            spriteBatch.Draw(stanceFrame[animationFrame], position, null, Color.White, 0, new Vector2(0, 0), 2, spriteEffects, 0);
+            if(!poweredUp)
+            {
+                spriteBatch.Draw(stanceFrame[animationFrame], position, null, Color.White, 0, new Vector2(0, 0), 2, spriteEffects, 0);
+            }
+            else
+            {
+                spriteBatch.Draw(stanceFrame[animationFrame], position, null, Color.White, 0, new Vector2(0, 0), 3.5f, spriteEffects, 0);
+            }
+            healthBar.Draw(spriteBatch);
         }
     }
 }
