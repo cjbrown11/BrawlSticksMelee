@@ -25,9 +25,11 @@ namespace BrawlSticksMelee.Sprites
 
         private Texture2D back;
 
-        private HealthBar healthBar;
+        public HealthBar healthBar;
 
-        public int health = 1000;
+        public int health;
+
+        public Vector2 healtBarPos;
 
         public int healthMax;
 
@@ -39,12 +41,15 @@ namespace BrawlSticksMelee.Sprites
 
         public short animationFrame = 0;
 
-        public LevelOneEnemySprite(Vector2 startingPosition, StickmanSprite gamePlayer)
+        public float scale = 2;
+
+        public LevelOneEnemySprite(Vector2 startingPosition, StickmanSprite gamePlayer, Vector2 healthPosition, int maxHealth)
         {
             position = startingPosition;
             player = gamePlayer;
-
-            healthMax = health;
+            health = maxHealth;
+            healthMax = maxHealth;
+            healtBarPos = healthPosition;
         }
 
         /// </summary>
@@ -63,7 +68,7 @@ namespace BrawlSticksMelee.Sprites
             back = content.Load<Texture2D>("healthbg");
             front = content.Load<Texture2D>("healthfg");
 
-            healthBar = new(back, front, healthMax, new(550, 50));
+            healthBar = new(back, front, healthMax, healtBarPos);
         }
 
         public void TakeDamage(int dmg)
@@ -100,27 +105,31 @@ namespace BrawlSticksMelee.Sprites
         /// <param name="spriteBatch">The spritebatch to render with</param>
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            // Update animation timer
+            // Update animation timerd
             animationTimer += gameTime.ElapsedGameTime.TotalSeconds;
 
             // Update animation frame
 
-            
+
             if (animationTimer > 0.4)
             {
-                if ((position.X < player.position.X + 50 && position.X > player.position.X - 50))
+                animationFrame++;
+                if (animationFrame > 1) animationFrame = 0;
+                animationTimer = 0;
+            }
+                if ((position.X < player.position.X + 150) && (position.X > player.position.X))
                 {
-                    if(player.animationFrame == 2)
+                    if (player.animationFrame == 2)
                     {
                         health -= 10;
                         TakeDamage(10);
                     }
-                    if(animationFrame != 2)
+                    if (animationFrame != 2 && player.blocked == false)
                     {
                         animationFrame = 2;
                         animationTimer = 0.2;
-                        player.health -= 10;
-                        player.TakeDamage(10);
+                        player.health -= 1;
+                        player.TakeDamage(1);
                     }
                 }
                 else if (animationFrame == 2)
@@ -138,18 +147,10 @@ namespace BrawlSticksMelee.Sprites
                     animationFrame = 0;
                     animationTimer = 0.2;
                 }
-                else
-                {
-                    animationFrame++;
-                    if (animationFrame > 1) animationFrame = 0;
-                    animationTimer = 0;
-                }
-
-            }
-
+            
 
             SpriteEffects spriteEffects = (flipped) ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
-            spriteBatch.Draw(stanceFrame[animationFrame], position, null, Color.White, 0, new Vector2(0, 0), 2, spriteEffects, 0);
+            spriteBatch.Draw(stanceFrame[animationFrame], position, null, Color.White, 0, new Vector2(0, 0), scale, spriteEffects, 0);
             healthBar.Draw(spriteBatch);
         }
     }

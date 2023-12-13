@@ -1,4 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
+using System;
+using System.Windows.Forms;
 
 namespace BrawlSticksMelee.Screens
 {
@@ -9,29 +11,47 @@ namespace BrawlSticksMelee.Screens
 
         public bool isActive = true;
 
+        public int selection;
+
         public MainMenu(BackgroundScreen bg) : base("Brawl Sticks Melee")
         {
             background = bg;
 
-            var playGameMenuEntry = new MenuEntry("Play Game");
-           // var creditsMenuEntry = new MenuEntry("Credits");
+            var singlePlayerMenuEntry = new MenuEntry("Single Player");
+            var versusPlayerMenuEntry = new MenuEntry("Versus");
+            //var instructionsMenuEntry = new MenuEntry("How to Play");
+            // var creditsMenuEntry = new MenuEntry("Credits");
             var exitMenuEntry = new MenuEntry("Exit");
 
-            playGameMenuEntry.Selected += PlayGameMenuEntrySelected;
+            singlePlayerMenuEntry.Selected += SinglePlayerMenuEntrySelected;
+            versusPlayerMenuEntry.Selected += VersusPlayerMenuEntrySelected;
+            //instructionsMenuEntry.Selected += InstructionsMenuEntrySelected;
             //creditsMenuEntry.Selected += CreditsMenuEntrySelected;
             exitMenuEntry.Selected += OnCancel;
 
-            MenuEntries.Add(playGameMenuEntry);
+            MenuEntries.Add(singlePlayerMenuEntry);
+            MenuEntries.Add(versusPlayerMenuEntry);
+            //MenuEntries.Add(instructionsMenuEntry);
             //MenuEntries.Add(creditsMenuEntry);
             MenuEntries.Add(exitMenuEntry);
         }
 
-        private void PlayGameMenuEntrySelected(object sender, PlayerIndexEventArgs e)
+        private void SinglePlayerMenuEntrySelected(object sender, PlayerIndexEventArgs e)
         {
             this.ExitScreen();
             background.ExitScreen();
             isActive = false;
+            selection = 10;
         }
+
+        private void VersusPlayerMenuEntrySelected(object sender, PlayerIndexEventArgs e)
+        {
+            this.ExitScreen();
+            background.ExitScreen();
+            isActive = false;
+            selection = -4;
+        }
+
 
         private void CreditsMenuEntrySelected(object sender, PlayerIndexEventArgs e)
         {

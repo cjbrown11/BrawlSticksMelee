@@ -10,6 +10,10 @@ namespace BrawlSticksMelee.Sprites
     {
         private KeyboardState keyboardState;
 
+        private KeyboardState currentKeyboardState;
+
+        private KeyboardState previousKeyboardState;
+
         private MouseState currentMouseState;
 
         private MouseState previousMouseState;
@@ -24,6 +28,8 @@ namespace BrawlSticksMelee.Sprites
 
         private Texture2D punchThree;
 
+        private Texture2D block;
+
         private Texture2D[] stanceFrame;
 
         private Texture2D front;
@@ -34,7 +40,7 @@ namespace BrawlSticksMelee.Sprites
 
         private HealthBar healthBar;
 
-        private bool flipped;
+        public bool flipped;
 
         public bool poweredUp = false;
 
@@ -45,6 +51,13 @@ namespace BrawlSticksMelee.Sprites
         private double animationTimer;
 
         public short animationFrame = 0;
+
+        public float rotation;
+
+        public int hit = 0;
+
+        public bool blocked = false;
+
 
         public StickmanSprite(Vector2 startingPosition)
         {
@@ -67,7 +80,8 @@ namespace BrawlSticksMelee.Sprites
                 stanceTwo = content.Load<Texture2D>("StickmanSprite-StanceTwo"),
                 punchOne = content.Load<Texture2D>("StickmanSprite-PunchOne"),
                 punchTwo = content.Load<Texture2D>("StickmanSprite-StanceOne"),
-                punchThree = content.Load<Texture2D>("StickmanSprite-PunchOne")
+                punchThree = content.Load<Texture2D>("StickmanSprite-PunchOne"),
+                block = content.Load<Texture2D>("StickmanSprite-Block")
                 };
             }
             else
@@ -78,7 +92,8 @@ namespace BrawlSticksMelee.Sprites
                 stanceTwo = content.Load<Texture2D>("StickmanGloveSprite-StanceTwo"),
                 punchOne = content.Load<Texture2D>("StickmanGloveSprite-PunchOne"),
                 punchTwo = content.Load<Texture2D>("StickmanGloveSprite-StanceOne"),
-                punchThree = content.Load<Texture2D>("StickmanGloveSprite-PunchOne")
+                punchThree = content.Load<Texture2D>("StickmanGloveSprite-PunchOne"),
+                block = content.Load<Texture2D>("StickmanGloveSprite-Block")
                 };
             }
 
@@ -92,7 +107,9 @@ namespace BrawlSticksMelee.Sprites
         {
             health -= dmg;
             if (health < 0) health = 0;
+            hit = 1;
         }
+
 
         /// <summary>
         /// Updates the sprite's position based on user input
@@ -110,10 +127,19 @@ namespace BrawlSticksMelee.Sprites
                 position += new Vector2(-2, 0);
                 flipped = true;
             }
-            if ((keyboardState.IsKeyDown(Keys.Right) || keyboardState.IsKeyDown(Keys.D)) && position.X < 670)
+            if ((keyboardState.IsKeyDown(Keys.Right) || keyboardState.IsKeyDown(Keys.S)) && position.X < 670)
             {
                 position += new Vector2(2, 0);
                 flipped = false;
+            }
+            if (keyboardState.IsKeyDown(Keys.Q) && poweredUp)
+            {
+                animationFrame = 5;
+                blocked = true;
+            }    
+            if(keyboardState.IsKeyUp(Keys.Q))
+            {
+                blocked = false;
             }
 
             healthBar.Update(health);
@@ -126,17 +152,16 @@ namespace BrawlSticksMelee.Sprites
         /// <param name="spriteBatch">The spritebatch to render with</param>
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            previousMouseState = currentMouseState;
+            previousKeyboardState = currentKeyboardState;
 
-            currentMouseState = Mouse.GetState();
+            currentKeyboardState = Keyboard.GetState();
 
             // Update animation timer
             animationTimer += gameTime.ElapsedGameTime.TotalSeconds;
 
             // Update animation frame
-            
-            
-            if (previousMouseState.LeftButton == ButtonState.Released && currentMouseState.LeftButton == ButtonState.Pressed)
+        
+            if(previousKeyboardState.IsKeyUp(Keys.W) && keyboardState.IsKeyDown(Keys.W))
             {
                 animationFrame = 2;
                 animationTimer = 0.3;
@@ -167,7 +192,7 @@ namespace BrawlSticksMelee.Sprites
                 
             }
 
-            if(position.X > 175 && position.X < 350 && animationFrame == 2)
+            if(position.X > 200 && position.X < 350 && animationFrame == 2)
             {
                 poweredUp = true;
             }
@@ -177,7 +202,21 @@ namespace BrawlSticksMelee.Sprites
             {
                 spriteBatch.Draw(stanceFrame[animationFrame], position, null, Color.White, 0, new Vector2(0, 0), 2, spriteEffects, 0);
             }
-            else
+            /*
+            if (!poweredUp && hit == 1)
+            {
+                position.X -= 5;
+                spriteBatch.Draw(stanceFrame[animationFrame], position, null, Color.White, -0.5f, new Vector2(0, 0), 2, spriteEffects, 0);
+                hit++;
+            }
+            if (!poweredUp && hit == 2)
+            {
+                position.X -= 10;
+                spriteBatch.Draw(stanceFrame[animationFrame], position, null, Color.White, -0.5f, new Vector2(0, 0), 2, spriteEffects, 0);
+                hit = 0;
+            }
+            */
+            if (poweredUp)
             {
                 spriteBatch.Draw(stanceFrame[animationFrame], position, null, Color.White, 0, new Vector2(0, 0), 3.5f, spriteEffects, 0);
             }

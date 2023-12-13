@@ -11,7 +11,7 @@ namespace BrawlSticksMelee.Sprites
         
         private Texture2D texture;
 
-        public Vector2 position = new Vector2(333, 380);
+        public Vector2 position = new Vector2(260, 370);
 
         /// <summary>
         /// Loads the sprite texture using the provided ContentManager
@@ -19,7 +19,7 @@ namespace BrawlSticksMelee.Sprites
         /// <param name="content">The ContentManager to load with</param>
         public void LoadContent(ContentManager content)
         {
-            texture = content.Load<Texture2D>("questionmark");
+            texture = content.Load<Texture2D>("Glove");
         }
 
         /// <summary>
@@ -38,7 +38,7 @@ namespace BrawlSticksMelee.Sprites
         /// <param name="spriteBatch">The spritebatch to render with</param>
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {    
-            spriteBatch.Draw(texture, position, null, Color.White, 0, new Vector2(0,0), new Vector2(0.7f, 0.7f), SpriteEffects.None, 0);
+            spriteBatch.Draw(texture, position, null, Color.White, 0, new Vector2(0,0), 0.8f, SpriteEffects.None, 0);
         }
     }
 }
